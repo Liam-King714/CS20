@@ -11,6 +11,8 @@ public class rectangle
 		int length;
 		int width;
 		
+		//Liam K
+		
 		//Create a Scanner object
 		Scanner userinput = new Scanner(System.in);
 		
