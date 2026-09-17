@@ -7,7 +7,7 @@ public class GradeAvg
 
 	public static void main(String[] args) 
 	{
-		//Declare variables (numbers used: 89, 97, 76, 89, 77. avg: 85.6%. total number: 428)
+		//Declare variables
 		int numberOfGrades, divisorOfGrades, grade;
 		int totalGrade = 0;
 		float averageGrade, test;
