@@ -1,3 +1,10 @@
+/*
+
+Program: Order.java          Last Date of this Revision: September 21st, 2026
+
+Purpose: Create an Order application that prompts the employee for the number of burgers, fries, and sodas then displays the total, the tax (6.5%), and the final cost.
+
+*/
 package mastery;
 
 import java.math.BigDecimal;
@@ -65,8 +72,32 @@ public class Order
 		tenderedCash = userinput.nextFloat();
 		BigDecimal tenderedCashDecimal = new BigDecimal(Float.toString(tenderedCash));
 		change = tenderedCashDecimal.subtract(finalTotalDecimal);
-		System.out.print(change);
+		System.out.print("Change: $" + change);
 
 	}
 
 }
+
+/*Screen dump
+
+Enter the number of burgers: 2
+Enter the number of fries: 5
+Enter the number of sodas: 5
+Total before tax: $13.78
+Tax: $0.90
+Final Total: $14.68
+Enter amount tendered: $20
+Change: $5.32
+
+
+
+Enter the number of burgers: 7
+Enter the number of fries: 9
+Enter the number of sodas: 3
+Total before tax: $24.61
+Tax: $1.60
+Final Total: $26.21
+Enter amount tendered: $30
+Change: $3.79
+
+*/
