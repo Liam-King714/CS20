@@ -1,6 +1,6 @@
 /*
 
-Program: Order.java          Last Date of this Revision: September 21st, 2026
+Program: Order.java          Last Date of this Revision: September 21, 2026
 
 Purpose: Create an Order application that prompts the employee for the number of burgers, fries, and sodas then displays the total, the tax (6.5%), and the final cost.
 
