@@ -14,26 +14,8 @@ public class TimeConverter
 	
 	public static float getHrsToDays(int hours, float days)
 	{
-		//Calculate the amount of days in the hours the user entered
 		days = (float) hours / 24;
-		
-		//Convert the amount of days calculated to a separate string value for later calculations
-		String stringDays = String.valueOf(days);
-		int decimalCheck = stringDays.indexOf('.');
-		
-		//Determine if the number of days calculated is a full number by checking the tenths place value of the amount of days calculated
-		char tenthsPlace = stringDays.charAt(decimalCheck + 1);
-		String stringTenths = String.valueOf(tenthsPlace);
-		boolean tenthsCheck = stringTenths.equals("0");
-		
-		if(tenthsCheck == true)
-		{
-			return((int) days);
-		}
-		else
-		{
-			return((float) days);
-		}
+		return(days);
 	}
 	
 	public static int getHrsToMins(int hours, int minutes)
@@ -45,7 +27,7 @@ public class TimeConverter
 	public static float getMinsToHrs(int minutes, float hours)
 	{
 		hours = (float) minutes / 60;
-		return((float) hours);
+		return(hours);
 	}
 	
 	public static void main(String[] args) 
@@ -97,45 +79,16 @@ public class TimeConverter
 				intHours = input.nextInt();
 				
 				//Call on the hours to days conversion method and get the amount of days are in how many hours the user entered
-				floatDays = (float) getHrsToDays(intHours, 0);
+				floatDays = getHrsToDays(intHours, 0);
 				
-				//Convert the amount of days calculated to a separate string value for later calculations
-				String stringDays = String.valueOf(floatDays);
-				int decimalCheck = stringDays.indexOf('.');
+				//Round the amount of days to just 2 decimal places
+				BigDecimal daysDecimal = new BigDecimal(Float.toString(floatDays));
+				daysDecimal = daysDecimal.setScale(2, RoundingMode.HALF_UP);
+				floatDays = daysDecimal.floatValue();
 				
-				//Part 1 of determining if the number of days calculated is a full number by checking the tenths place value of the amount of days calculated
-				char tenthsPlace = stringDays.charAt(decimalCheck + 1);
-				String stringTenths = String.valueOf(tenthsPlace);
-				boolean tenthsCheck = stringTenths.equals("0");
-				
-				//Part 2 of determining if the number of days calculated is a full number by checking the hundredths place value of the amount of days calculated
-				char hundredthsPlace = stringDays.charAt(decimalCheck + 2);
-				String stringHundredths = String.valueOf(hundredthsPlace);
-				boolean hundredthsCheck = stringHundredths.equals("0");
-				
-				//Convert the amount of days to an integer if both the hundreths and tenths place values are equal to 0
-				if(tenthsCheck == true && hundredthsCheck == true)
-				{
-					intDays = (int) floatDays;
-				}
-				//Convert the amount of days to just 2 decimal places if either the hundredths or tenths is not equal to 0
-				else if(tenthsCheck == false || hundredthsCheck == false)
-				{
-					BigDecimal daysDecimal = new BigDecimal(Float.toString(floatDays));
-					daysDecimal = daysDecimal.setScale(2, RoundingMode.HALF_UP);
-					floatDays = daysDecimal.floatValue();
-				}
-				
-				//Display the amount of days are in how many hours the user entered
+				//Display the amount of days are in the amount of hours the user entered
 				System.out.println();
-				if(tenthsCheck == true && hundredthsCheck == true)
-				{
-					System.out.println("There is " + intDays + " day(s) in " + intHours + " hour(s).");
-				}
-				else if (tenthsCheck == false || hundredthsCheck == false)
-				{
-					System.out.println("There is " + floatDays + " days in " + intHours + " hours.");
-				}
+				System.out.println("There are " + floatDays + " day(s) in " + intHours + " hour(s).");
 				System.out.println();
 			}
 			//Create an else if statement for the hours to minutes conversion
@@ -162,50 +115,29 @@ public class TimeConverter
 				System.out.print("Enter number of minutes: ");
 				intMinutes = input.nextInt();
 				
-				//Call on the minutes to hours conversion method and get the amount of days are in how many hours the user entered
-				floatHours = (float) getMinsToHrs(intMinutes, 0);
+				//Call on the hours to days conversion method and get the amount of days are in how many hours the user entered
+				floatHours = getMinsToHrs(intMinutes, 0);
 				
-				//Convert the amount of hours calculated to a separate string value for later calculations
-				String stringHours = String.valueOf(floatHours);
-				int decimalCheck = stringHours.indexOf('.');
+				//Round the amount of days to just 2 decimal places
+				BigDecimal hoursDecimal = new BigDecimal(Float.toString(floatHours));
+				hoursDecimal = hoursDecimal.setScale(2, RoundingMode.HALF_UP);
+				floatHours = hoursDecimal.floatValue();
 				
-				//Part 1 of determining if the number of hours calculated is a full number by checking the tenths place value of the amount of hours calculated
-				char tenthsPlace = stringHours.charAt(decimalCheck + 1);
-				String stringTenths = String.valueOf(tenthsPlace);
-				boolean tenthsCheck = stringTenths.equals("0");
-				
-				//Part 2 of determining if the number of hours calculated is a full number by checking the hundredths place value of the amount of hours calculated
-				char hundredthsPlace = stringHours.charAt(decimalCheck + 2);
-				String stringHundredths = String.valueOf(hundredthsPlace);
-				boolean hundredthsCheck = stringHundredths.equals("0");
-				
-				//Convert the amount of hours to an integer if both the hundreths and tenths place values are equal to 0
-				if(tenthsCheck == true && hundredthsCheck == true)
-				{
-					intHours = (int) floatHours;
-				}
-				//Reduce the amount of hours to just 2 decimal places if either the hundredths or tenths is not equal to 0
-				else if(tenthsCheck == false || hundredthsCheck == false)
-				{
-					BigDecimal hoursDecimal = new BigDecimal(Float.toString(floatHours));
-					hoursDecimal = hoursDecimal.setScale(2, RoundingMode.HALF_UP);
-					floatHours = hoursDecimal.floatValue();
-				}
-				
-				//Display the amount of hours are in how many minutes the user entered
+				//Display the amount of days are in the amount of hours the user entered
 				System.out.println();
-				if(tenthsCheck == true && hundredthsCheck == true)
-				{
-					System.out.println("There is " + intHours + " hour(s) in " + intMinutes + " minute(s).");
-				}
-				else if (tenthsCheck == false || hundredthsCheck == false)
-				{
-					System.out.println("There is " + floatHours + " hours in " + intMinutes + " minutes.");
-				}
+				System.out.println("There are " + floatHours + " hour(s) in " + intMinutes + " minute(s).");
+				System.out.println();
+			}
+			//Create an else statement for if the user doesn't enter 1-4
+			else if(choice != -1 && choice != 1 && choice != 2 && choice != 3 && choice != 4)
+			{
+				System.out.println();
+				System.out.println("Please enter a valid integer (1-4).");
 				System.out.println();
 			}
 			
 		}
+		System.out.println();
 		System.out.println("Thank you for using my program!");
 
 	}
