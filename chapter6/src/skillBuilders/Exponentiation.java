@@ -20,7 +20,7 @@ public class Exponentiation
 		System.out.print("Enter a second number: ");
 		num2 = input.nextInt();
 		
-		//Raise the first number the user entered by the power of the second number and record it
+		//Raise the first number the user entered by the power of the second number and record the result
 		finalNum = (int) Math.pow(num1, num2);
 		
 		//Display the final number to the user

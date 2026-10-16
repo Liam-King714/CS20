@@ -147,9 +147,33 @@ public class Nim
 }
 /*Screen dump
 
+There are 22 stones. How many would you like? 3
+There are 19 stones. The computer takes 2 stone(s)
+There are 17 stones. How many would you like? 2
+There are 15 stones. The computer takes 1 stone(s)
+There are 14 stones. How many would you like? 3
+There are 11 stones. The computer takes 1 stone(s)
+There are 10 stones. How many would you like? 2
+There are 8 stones. The computer takes 2 stone(s)
+There are 6 stones. How many would you like? 3
+There are 3 stones. The computer takes 1 stone(s)
+There are 2 stones. How many would you like? 1
+There are 1 stones. The computer takes 1 stone(s)
+Congratulations you win!
+Thank you for playing my program! Please play again later!
 
 
-
+There are 18 stones. How many would you like? 3
+There are 15 stones. The computer takes 3 stone(s)
+There are 12 stones. How many would you like? 3
+There are 9 stones. The computer takes 1 stone(s)
+There are 8 stones. How many would you like? 2
+There are 6 stones. The computer takes 3 stone(s)
+There are 3 stones. How many would you like? 1
+There are 2 stones. The computer takes 1 stone(s)
+There are 1 stones. How many would you like? 1
+The computer wins! Better luck next time!
+Thank you for playing my program! Please play again later!
 
 
 */
