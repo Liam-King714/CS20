@@ -24,14 +24,16 @@ public class Nim
 		}
 	}
 	
-	public static int drawStones(int stones, int minNum, int maxNum, int stonesDrawn)
+	public static int drawStones(int stones, int minNum, int maxNum)
 	{
+		int stonesDrawn;
 		stonesDrawn = (int) ((maxNum - minNum + 1) * Math.random() + minNum);
 		return(stonesDrawn);
 	}
 	
-	public static int getStartingStones(int max, int min, int stones)
+	public static int getStartingStones(int max, int min)
 	{
+		int stones;
 		stones = (int) ((max - min + 1) * Math.random() + min);
 		return(stones);
 	}
@@ -53,13 +55,13 @@ public class Nim
 		//Declare variables
 		int stones = 0, minDraw = 1, maxDraw = 3, minStones = 15, maxStones = 30, userDraw, computerDraw;
 		boolean validUserNum, userWin = false, userTurn = true, userPlaying = true;
-		String endMessage = "";
+		String endMessage;
 		
 		//Introduce the Scanner Class
 		Scanner input = new Scanner(System.in);
 		
 		//Generate the amount of stones the game will start with
-		stones = getStartingStones(maxStones, minStones, 0);
+		stones = getStartingStones(maxStones, minStones);
 		
 		//Create the loop system that will be the game the user plays against the computer
 		while(userPlaying == true)
@@ -96,14 +98,14 @@ public class Nim
 				if(stones != 0)
 				{
 					//Move onto the computers turn and generate the number of stones the computer will take
-					computerDraw = drawStones(stones, minDraw, maxDraw, 0);
+					computerDraw = drawStones(stones, minDraw, maxDraw);
 			
 					//Use an if statement to check if the computer is taking more stones than available
 					if(computerDraw > stones)
 					{
 						while(computerDraw > stones)
 						{
-							computerDraw = drawStones(stones, minDraw, maxDraw, 0);
+							computerDraw = drawStones(stones, minDraw, maxDraw);
 						}
 					}
 				
