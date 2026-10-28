@@ -5,13 +5,29 @@ public class DemoMethods
 
 	public static void main(String[] args) 
 	{
+		//Method1
+		displayWelcome();
 		
+		//Method2
+		greetStudent("Liam");
+		
+		//Method3
+		int total = addNumbers(8, 21);
+		System.out.println("Total: " + total);
+		
+		//Method4
+		double area = calculateArea(2.75);
+		System.out.println("Area: " + area);
+		
+		//Method5
+		boolean result = isPassing(85);
+		System.out.println("Passing: " + result);
 
 	}
 	
 	
 	//Method 1: No Parameters, no return value
-	public static void displayMessage()
+	public static void displayWelcome()
 	{
 		System.out.println("Welcome to our class.");
 	}
