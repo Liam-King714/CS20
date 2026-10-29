@@ -3,45 +3,33 @@ package mastery;
 public class Adder 
 {
 	//Declare instance variables
-	private int points = 0, answer = 0, firstNum = 0, secondNum = 0;
-	private String equation;
+	private static int firstNum, secondNum;
+	private static int answer;
+	private static String equation;
 	
 	//Default constructor
 	public Adder()
 	{
-		equation = "";
+		answer = 0;
+		firstNum = 0;
+		secondNum = 0;
 	}
 	
-	//Overload constructor
-	public Adder(String firstEquation)
+	public static void generateEquation()
 	{
-		equation = firstEquation;
+		firstNum = (int) (20 * Math.random());
+		
+		secondNum = (int) (20 * Math.random());
+		
+		answer = firstNum + secondNum;
+		
+		equation = firstNum + " + " + secondNum + " = ";
+		System.out.print(equation);
 	}
 	
-	public String generateEquation()
+	public static int getAnswer()
 	{
-		int num1, num2;
-		
-		num1 = (int) (Math.random() * 21);
-		firstNum = num1;
-		
-		num2 = (int) (Math.random() * 21);
-		secondNum = num2;
-		
-		equation = num1 + " + " + num2 + " = ";
-		return(equation);
-	}
-	
-	public boolean equals(int guess)
-	{
-		if(answer == guess)
-		{
-			return(true);
-		}
-		else
-		{
-			return(false);
-		}
+		return(answer);
 	}
 
 }
