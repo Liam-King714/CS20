@@ -88,6 +88,64 @@ public class AdderGame
 }
 /*Screen dump
 
+19 + 17 = 37
+Wrong answer. Enter another answer: 36
+1 + 10 = 11
+2 + 12 = 14
+11 + 1 = 12
+3 + 17 = 20
+19 + 11 = 30
+11 + 11 = 22
+9 + 13 = 21
+Wrong answer. Enter another answer: 22
+5 + 0 = 5
+6 + 1 = 7
+3 + 15 = 17
+Wrong answer. Enter another answer: 19
+Wrong answer. Enter another answer: 18
+0 + 1 = 1
+11 + 14 = 3
+Wrong answer. Enter another answer: 24
+Wrong answer. Enter another answer: 6
+9 + 13 = 22
+15 + 14 = 29
+16 + 11 = -1
+Your score is: 62
+Thank you for playing! I hope you enjoyed, have a great day!
 
+
+18 + 3 = 21
+11 + 8 = 19
+6 + 9 = 15
+17 + 10 = 27
+1 + 12 = 13
+8 + 4 = 12
+10 + 1 = 11
+2 + 5 = 7
+8 + 1 = 9
+11 + 11 = 22
+10 + 8 = 18
+13 + 14 = 27
+9 + 13 = 22
+9 + 2 = 11
+13 + 18 = 31
+15 + 6 = 21
+9 + 11 = 20
+11 + 6 = 17
+5 + 7 = 12
+17 + 8 = 25
+7 + 14 = 21
+4 + 7 = 11
+9 + 18 = 27
+10 + 12 = 22
+4 + 14 = 18
+14 + 7 = 21
+17 + 14 = 31
+2 + 9 = 11
+7 + 2 = 9
+1 + 2 = 3
+2 + 17 = -1
+Your score is: 150
+Thank you for playing! I hope you enjoyed, have a great day!
 
 */

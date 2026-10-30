@@ -22,7 +22,7 @@ public class GameCharacter
 	
 	public void attack()
 	{
-		System.out.println(name + " attacks! Deaks 10 damage.");
+		System.out.println(name + " attacks! Deals 10 damage.");
 	}
 	
 	public void takeDamage(int damage)

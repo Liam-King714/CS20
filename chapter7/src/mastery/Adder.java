@@ -3,8 +3,7 @@ package mastery;
 public class Adder 
 {
 	//Declare instance variables
-	private static int firstNum, secondNum;
-	private static int answer;
+	private static int firstNum, secondNum, answer;
 	private static String equation;
 	
 	//Default constructor
