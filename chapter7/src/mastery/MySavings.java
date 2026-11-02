@@ -13,7 +13,13 @@ public class MySavings
 
 	public static void main(String[] args) 
 	{
-		// TODO Auto-generated method stub
+		//Declare variables
+		final int FLAG = 0;
+		int choice, amountAdded;
+		PiggyBank bank = new PiggyBank(0,0,0,40);
+		
+		bank.showTotalInBank();
+		bank.takeMoneyOutOfBank(0.67f);
 
 	}
 
