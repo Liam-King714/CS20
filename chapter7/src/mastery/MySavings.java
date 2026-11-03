@@ -16,10 +16,11 @@ public class MySavings
 		//Declare variables
 		final int FLAG = 0;
 		int choice, amountAdded;
-		PiggyBank bank = new PiggyBank(0,0,0,40);
+		PiggyBank bank = new PiggyBank(40,5,20,35);
 		
 		bank.showTotalInBank();
-		bank.takeMoneyOutOfBank(0.67f);
+		bank.takeCoinsOutOfBank(9,6,4,5);
+		bank.showTotalInBank();
 
 	}
 
