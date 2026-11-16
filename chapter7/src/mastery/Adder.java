@@ -9,9 +9,17 @@ public class Adder
 	//Default constructor
 	public Adder()
 	{
-		answer = 0;
 		firstNum = 0;
 		secondNum = 0;
+		answer = 0;
+	}
+	
+	//Overload constructor
+	public Adder(int startFirstNum, int startSecondNum, int startAnswer)
+	{
+		firstNum = startFirstNum;
+		secondNum = startSecondNum;
+		answer = startAnswer;
 	}
 	
 	public static void generateEquation()

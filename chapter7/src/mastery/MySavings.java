@@ -13,9 +13,9 @@ public class MySavings
 
 	public static void main(String[] args) 
 	{
-		//Declare variables
+		//Declare variables, and create a new PiggyBank instance
 		final int FLAG = 0;
-		int choice, amountAdded;
+		int choice, quartersRemoved = 0, dimesRemoved = 0, nickelsRemoved = 0, penniesRemoved = 0;
 		PiggyBank bank = new PiggyBank(40,5,20,35);
 		
 		bank.showTotalInBank();
