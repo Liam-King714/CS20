@@ -8,19 +8,20 @@ Purpose: Create a MySavings application that displays a menu of choices for ente
 
 package mastery;
 
+import java.util.Scanner;
+
 public class MySavings
 {
 
 	public static void main(String[] args) 
 	{
 		//Declare variables, and create a new PiggyBank instance
-		final int FLAG = 0;
+		final int FLAG = -1;
 		int choice, quartersRemoved = 0, dimesRemoved = 0, nickelsRemoved = 0, penniesRemoved = 0;
 		PiggyBank bank = new PiggyBank(40,5,20,35);
 		
-		bank.showTotalInBank();
-		bank.takeCoinsOutOfBank(9,6,4,5);
-		bank.showTotalInBank();
+		//Introduce the Scanner Class.
+		Scanner input = new Scanner(System.in);
 
 	}
 

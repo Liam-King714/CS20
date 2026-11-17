@@ -44,6 +44,9 @@ public class PiggyBank
 		
 		total = (float) (total + 0.25);
 		
+		//round total to 2 decimals incase of minor errors
+		total = (float) (Math.round(total * 100.0) / 100.0);
+		
 		System.out.println();
 		System.out.println("You put 1 quarter into your piggy bank. You now have " + quarters + " quarter(s).");
 	}
@@ -54,6 +57,9 @@ public class PiggyBank
 		dimes = dimes + 1;
 		
 		total = (float) (total + 0.10);
+		
+		//round total to 2 decimals incase of minor errors
+		total = (float) (Math.round(total * 100.0) / 100.0);
 		
 		System.out.println();
 		System.out.println("You put 1 dime into your piggy bank. You now have " + dimes + " dime(s).");
@@ -66,6 +72,9 @@ public class PiggyBank
 		
 		total = (float) (total + 0.05);
 		
+		//round total to 2 decimals incase of minor errors
+		total = (float) (Math.round(total * 100.0) / 100.0);
+		
 		System.out.println();
 		System.out.println("You put 1 nickel into your piggy bank. You now have " + nickels + " nickel(s).");
 	}
@@ -76,6 +85,9 @@ public class PiggyBank
 		pennies = pennies + 1;
 		
 		total = (float) (total + 0.01);
+		
+		//round total to 2 decimals incase of minor errors
+		total = (float) (Math.round(total * 100.0) / 100.0);
 		
 		System.out.println();
 		System.out.println("You put 1 penny into your piggy bank. You now have " + pennies + " penny(ies).");

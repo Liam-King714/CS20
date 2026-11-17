@@ -3,40 +3,65 @@ package mastery;
 public class Adder 
 {
 	//Declare instance variables
-	private static int firstNum, secondNum, answer;
-	private static String equation;
+	private static int points, num, answer;
 	
 	//Default constructor
 	public Adder()
 	{
-		firstNum = 0;
-		secondNum = 0;
-		answer = 0;
+		points = 0;
 	}
 	
-	//Overload constructor
-	public Adder(int startFirstNum, int startSecondNum, int startAnswer)
+	//overload constructor
+	public Adder(int startPoints)
 	{
-		firstNum = startFirstNum;
-		secondNum = startSecondNum;
-		answer = startAnswer;
+		points = startPoints;
 	}
 	
-	public static void generateEquation()
+	public static int getNewNum()
 	{
-		firstNum = (int) (20 * Math.random());
+		num = (int) (20 * Math.random());
 		
-		secondNum = (int) (20 * Math.random());
-		
-		answer = firstNum + secondNum;
-		
-		equation = firstNum + " + " + secondNum + " = ";
-		System.out.print(equation);
+		return(num);
 	}
 	
-	public static int getAnswer()
+	public static void displayEquation(int numOne, int numTwo)
 	{
+		System.out.print(numOne + " + " + numTwo + " = ");
+	}
+	
+	public static int getAnswer(int numOne, int numTwo)
+	{
+		answer = numOne + numTwo;
+		
 		return(answer);
+	}
+	
+	public static void addPoints(int attemptsTaken, boolean correctOrNot)
+	{
+		if(attemptsTaken == 1)
+		{
+			points = points + 5;
+		}
+		
+		if(attemptsTaken == 2)
+		{
+			points = points + 3;
+		}
+		
+		if(attemptsTaken == 3)
+		{
+			points = points + 1;
+		}
+		
+		if(attemptsTaken == 4)
+		{
+			points = points + 0;
+		}
+	}
+	
+	public static int getPoints()
+	{
+		return(points);
 	}
 
 }
