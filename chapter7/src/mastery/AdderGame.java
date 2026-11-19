@@ -1,6 +1,6 @@
 /*
 
-Program: Adder.java          Last Date of this Revision: 11/18/2026
+Program: Adder.java          Last Date of this Revision: 11/19/2026
 
 Purpose: The Adder game prompts a player for the answer to an addition problem. (Just as a note, the original assignment said to use 999 to quit, but I changed it to -1 in my version because its faster for me to type).
 
@@ -18,7 +18,7 @@ public class AdderGame
 		final int FLAG = -1;
 		int points = 0, userGuess = 0, answer = 0, attempts = 0, numOne = 0, numTwo = 0, firstTryCorrect = 0, secondTryCorrect = 0, thirdTryCorrect = 0, totalWrong = 0;
 		boolean correctAnswer = false;
-		Adder userStatsAndAns = new Adder(0,0,0,0,0,0);
+		Adder userStats = new Adder(0,0,0,0,0);
 		
 		//Introduce the Scanner Class.
 		Scanner input = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class AdderGame
 		while(FLAG != userGuess)
 		{
 			//Calculate the points added to the user's total points, and change firstTryRight, secondTryRight, thirdTryRight or totalWrong depending on how many attempts the user took and if they got the right answer
-			userStatsAndAns.addPoints(attempts, correctAnswer);
+			userStats.addPoints(attempts, correctAnswer);
 			
 			//Reset correctAnswer to false, and attempts to 1 for the next equation
 			correctAnswer = false;
@@ -36,7 +36,7 @@ public class AdderGame
 			//Get the numbers for the current equation
 			numOne = Adder.getNewNum();
 			numTwo = Adder.getNewNum();
-			answer = userStatsAndAns.getAnswer(numOne, numTwo);
+			answer = Adder.getAnswer(numOne, numTwo);
 			System.out.println("Answer: " + answer);
 			System.out.println("Attempts: " + attempts);
 			//Display the current equation to the user, and prompt them for the answer and record it, and increase the amount of attempts it took to answer this equation by 1
@@ -76,20 +76,27 @@ public class AdderGame
 			}
 		}
 		//Get the user's stats from userStatsAndAns instance
-		firstTryCorrect = userStatsAndAns.getFirstRight();
-		secondTryCorrect = userStatsAndAns.getSecondRight();
-		thirdTryCorrect = userStatsAndAns.getThirdRight();
-		totalWrong = userStatsAndAns.getTotalWrong();
-		points = userStatsAndAns.getPoints();
+		firstTryCorrect = userStats.getFirstRight();
+		secondTryCorrect = userStats.getSecondRight();
+		thirdTryCorrect = userStats.getThirdRight();
+		totalWrong = userStats.getTotalWrong();
+		points = userStats.getPoints();
 		
 		//Display the users score for when they decide to end the game.
 		System.out.println();
 		System.out.println("Your score is: " + points);
-		System.out.println("You got " + firstTryCorrect + " questions correct on your first try!");
-		System.out.println("You got " + secondTryCorrect + " questions correct on your second try!");
-		System.out.println("You got " + thirdTryCorrect + " questions correct on your third try!");
-		System.out.println("You got " + totalWrong + " questions wrong.");
-		System.out.println("Thank you for playing! I hope you enjoyed, have a great day!");
+		System.out.println("You got " + firstTryCorrect + " question(s) correct on your first try!");
+		System.out.println("You got " + secondTryCorrect + " question(s) correct on your second try!");
+		System.out.println("You got " + thirdTryCorrect + " question(s) correct on your third try!");
+		if(totalWrong > 0)
+		{
+			System.out.println("You got " + totalWrong + " question(s) wrong.");
+		}
+		else
+		{
+			System.out.println("You got " + totalWrong + " questions wrong! Nice work!");
+		}
+		System.out.println("Thank you for playing! I hope you enjoyed the game, and have a great day!");
 
 	}
 

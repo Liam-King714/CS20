@@ -3,7 +3,8 @@ package mastery;
 public class Adder 
 {
 	//Declare instance variables
-	private static int firstTryRight, secondTryRight, thirdTryRight, totalWrong, points, answer;;
+	private int firstTryRight, secondTryRight, thirdTryRight, totalWrong, points;
+	private static int answer;
 	
 	//Default constructor
 	public Adder()
@@ -13,18 +14,16 @@ public class Adder
 		thirdTryRight = 0;
 		totalWrong = 0;
 		points = 0;
-		answer = 0;
 	}
 	
 	//overload constructor
-	public Adder(int startFirstRight, int startSecondRight, int startThirdRight, int startTotalWrong, int startPoints, int startAnswer)
+	public Adder(int startFirstRight, int startSecondRight, int startThirdRight, int startTotalWrong, int startPoints)
 	{
 		firstTryRight = startFirstRight;
 		secondTryRight = startSecondRight;
 		thirdTryRight = startThirdRight;
 		totalWrong = startTotalWrong;
 		points = startPoints;
-		answer = startAnswer;
 	}
 	
 	public static int getNewNum()
@@ -41,7 +40,7 @@ public class Adder
 		System.out.print(numOne + " + " + numTwo + " = ");
 	}
 	
-	public int getAnswer(int numOne, int numTwo)
+	public static int getAnswer(int numOne, int numTwo)
 	{
 		answer = numOne + numTwo;
 		
