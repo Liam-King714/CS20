@@ -4,7 +4,6 @@ public class Adder
 {
 	//Declare instance variables
 	private int firstTryRight, secondTryRight, thirdTryRight, totalWrong, points;
-	private static int answer;
 	
 	//Default constructor
 	public Adder()
@@ -42,6 +41,8 @@ public class Adder
 	
 	public static int getAnswer(int numOne, int numTwo)
 	{
+		int answer;
+		
 		answer = numOne + numTwo;
 		
 		return(answer);
