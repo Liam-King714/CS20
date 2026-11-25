@@ -8,7 +8,7 @@ public class StudentRoster
 	public static void main(String[] args) 
 	{
 		//Declare variables
-		int studentAmount = -1, listNumber;
+		int studentAmount = -1, addToList = 0;
 		String studentFirstName, studentLastName, nameAndInitial;
 		char lastNameInitial;
 		
