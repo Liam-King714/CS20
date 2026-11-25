@@ -37,8 +37,6 @@ public class AdderGame
 			numOne = Adder.getNewNum();
 			numTwo = Adder.getNewNum();
 			answer = Adder.getAnswer(numOne, numTwo);
-			System.out.println("Answer: " + answer);
-			System.out.println("Attempts: " + attempts);
 			//Display the current equation to the user, and prompt them for the answer and record it, and increase the amount of attempts it took to answer this equation by 1
 			Adder.displayEquation(numOne, numTwo);
 			userGuess = input.nextInt();
@@ -73,9 +71,13 @@ public class AdderGame
 				{
 					correctAnswer = false;
 				}
+				
+				//Display to the user that to quit they must enter -1
+				System.out.println("Enter -1 to quit.");
 			}
 		}
-		//Get the user's stats from userStatsAndAns instance
+		
+		//Get the user's stats from userStats instance
 		firstTryCorrect = userStats.getFirstRight();
 		secondTryCorrect = userStats.getSecondRight();
 		thirdTryCorrect = userStats.getThirdRight();
